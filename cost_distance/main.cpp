@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string>
 #include "raster.h"
+#include <time.h>
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main(int argc, const char** argv){
    string locsMap = "input/locs_small.tif"
 	
 
-	clock_t begin = clock();// start timer
+	//clock_t begin = clock();// start timer
 
 	// Import input maps
 	float **friction = objRaster.importRaster(frictionMap);
@@ -41,14 +42,14 @@ int main(int argc, const char** argv){
 
 
 
-	clock_t end = clock();
+	//clock_t end = clock();
 
     int rows = objRaster.getRows();
 	int cols = objRaster.getCols();
 
 	cout << "Map importation sucessful!, Raster with " << rows <<" rows and " << cols << " cols " << endl;  
-	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+	//double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
 
-	cout << "Total importation time: " << elapsed_secs << " secs." << endl;
+	//cout << "Total importation time: " << elapsed_secs << " secs." << endl;
     cout << "-------------------------------------------------------"<< endl;
 }
