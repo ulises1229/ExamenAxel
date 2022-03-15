@@ -59,12 +59,12 @@ void exportTiff(string path, float** output_raster, int rows, int cols) {
     //char **papszOptions = NULL;
     GDALDriver *poDriver;
     OGRSpatialReference oSRS;
-    string fileName = "cost_distance_output_" + ".tiff";
-    string proyeccion = "EPSG:" + epsg;
+    string fileName = "cost_distance_output.tiff"; // TODO: Rename to avoid ovewrite
+    
     poDriver = GetGDALDriverManager()->GetDriverByName("Gtiff");
     poDstDS = poDriver->Create( fileName.c_str(), cols, rows, 1, GDT_Float32, NULL);
     poDstDS->SetGeoTransform(adfGeoTransform);
-    oSRS.SetWellKnownGeogCS(proyeccion.c_str());
+    
     GDALRasterBand *poBand;
     float *pBuf = new float[rows * cols];
     poBand = poDstDS->GetRasterBand(1);

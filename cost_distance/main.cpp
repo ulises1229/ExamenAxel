@@ -25,7 +25,7 @@ int main(int argc, const char** argv){
 
     // Modify this path to convinence
    string frictionMap = "input/fricc_small.tif";
-   string locsMap = "input/locs_small.tif"
+   string locsMap = "input/locs_small.tif";
 	
 
 	//clock_t begin = clock();// start timer
