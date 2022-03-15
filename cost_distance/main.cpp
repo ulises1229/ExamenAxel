@@ -30,9 +30,9 @@ int main(int argc, const char** argv){
 	clock_t begin = clock();// start timer
 
 	// Import input maps
-	float **friction = objRaster.importRaster(frictionMap, true);
+	float **friction = objRaster.importRaster(frictionMap);
 
-	float **locs = objRaster.imp;
+	float **locs = objRaster.importRaster(locsMap);
 
     // TODO: store each locality in a structure, each locality is denoted by an ID in the matrix.
     

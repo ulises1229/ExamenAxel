@@ -28,7 +28,7 @@ class Raster{
 public:
 
    
-    float** importRaster(string file, bool flag);
+    float** importRaster(string file);
     double adfGeoTransform[6];
     void exportTiff(string path, float** output_raster, int rows, int cols);
 

@@ -5,7 +5,7 @@
 
 #include "raster.h"
 
-float** Raster::importRaster(string file, bool flag) {
+float** Raster::importRaster(string file) {
         int scale, m, n;
         cout << "Reading tiff ..." << endl;
         GDALDataset *dataset;
